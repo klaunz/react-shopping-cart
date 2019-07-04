@@ -1,0 +1,24 @@
+.ProductItem {
+  background-color: #ededed;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.ProductItem__button {
+  border: 0;
+  background-color: #282c34;
+  border-radius: 2rem;
+  color: #fff;
+  padding: 1rem 2rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .ProductItem__button {
+    width: auto;
+  }
+}
+
+.Product__price {
+  margin-bottom: 0;
+}

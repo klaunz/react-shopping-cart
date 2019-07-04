@@ -1,0 +1,13 @@
+.ProductList__title {
+  border-bottom: .1rem solid #282c34;
+  padding-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .ProductList__products {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

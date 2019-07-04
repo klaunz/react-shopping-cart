@@ -1,0 +1,27 @@
+.Cart {
+  border-top: 1px solid #282c34;
+}
+
+.Cart__button[disabled] {
+  background-color: #dedede;
+}
+
+.Cart__button {
+  background-color: #282c34;
+  color: #61dafb;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .Cart__button {
+    width: auto;
+  }
+}
+
+.Cart .Cart__nodes .Product {
+  background-color: #ededed;
+  padding: 1rem;
+}

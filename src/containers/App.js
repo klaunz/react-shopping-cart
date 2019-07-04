@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import ProductsContainer from '../containers/ProductsContainer'
+import CartContainer from '../containers/CartContainer'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       </header>
       <section className="App-section">
         <ProductsContainer />
+        <CartContainer />
       </section>
     </div>
   );

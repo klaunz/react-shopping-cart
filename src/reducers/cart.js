@@ -1,4 +1,8 @@
-import * as types from '../actions/types'
+import {
+  CHECKOUT_REQUEST,
+  CHECKOUT_FAILURE,
+  ADD_TO_CART
+} from '../actions/types'
 
 const initialState = {
   addedIds: [],
@@ -7,7 +11,7 @@ const initialState = {
 
 const addedIds = (state = initialState.addedIds, action) => {
   switch (action.type) {
-    case types.ADD_TO_CART:
+    case ADD_TO_CART:
       if (state.indexOf(action.productId) !== -1) {
         return state
       }
@@ -19,7 +23,7 @@ const addedIds = (state = initialState.addedIds, action) => {
 
 const quantityById = (state = initialState.quantityById, action) => {
   switch (action.type) {
-    case types.ADD_TO_CART:
+    case ADD_TO_CART:
       const { productId } = action
       return { ...state,
         [productId]: (state[productId] || 0) + 1
@@ -36,9 +40,9 @@ export const getAddedIds = state => state.addedIds
 
 const cart = (state = initialState, action) => {
   switch (action.type) {
-    case types.CHECKOUT_REQUEST:
+    case CHECKOUT_REQUEST:
       return initialState
-    case types.CHECKOUT_FAILURE:
+    case CHECKOUT_FAILURE:
       return action.cart
     default:
       return {
