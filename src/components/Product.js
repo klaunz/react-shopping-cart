@@ -6,6 +6,9 @@ const Product = ({ price, quantity, name }) => (
   <div className="Product">
     <h3 className="Product__name">{name}</h3>
     <h4 className="Product__price">&#36;{price}{quantity ? ` x ${quantity}` : null}</h4>
+    {quantity ?
+      <button className="ProductItem__button">Remove</button> : null
+    }
   </div>
 )
 
