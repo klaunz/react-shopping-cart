@@ -4,21 +4,39 @@
   padding: 1rem;
 }
 
+@media (min-width: 768px) {
+  .ProductItem {
+    padding: 2rem;
+    text-align: left;
+  }
+}
+
 .ProductItem__button {
   border: 0;
   background-color: #282c34;
-  border-radius: 2rem;
+  border-radius: .3rem;
   color: #fff;
-  padding: 1rem 2rem;
+  padding: .5rem 2rem;
   width: 100%;
 }
 
 @media (min-width: 768px) {
   .ProductItem__button {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
     width: auto;
   }
 }
 
 .Product__price {
   margin-bottom: 0;
+}
+
+.ProductItem__remove {
+  border: 0;
+  background-color: transparent;
+  color: #282c34;
+  font-style: italic;
+  margin-top: 1rem;
+  padding: 0;
 }

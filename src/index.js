@@ -1,26 +1,24 @@
-import React from 'react'
-import { render } from 'react-dom'
-import { createStore, applyMiddleware } from 'redux'
-import { Provider } from 'react-redux'
-import { createLogger } from 'redux-logger'
-import thunk from 'redux-thunk'
-import reducer from './reducers'
-import { getAllProducts } from './actions'
-import './index.css'
-import App from './containers/App'
+import React from "react";
+import { render } from "react-dom";
+import { createStore, applyMiddleware } from "redux";
+import { Provider } from "react-redux";
+import { createLogger } from "redux-logger";
+import thunk from "redux-thunk";
+import reducer from "./reducers";
+import { getAllProducts, loadCart } from "./actions";
+import "./index.css";
+import App from "./containers/App";
 
-const middleware = [ thunk ];
+const middleware = [thunk];
 
-const store = createStore(
-  reducer,
-  applyMiddleware(...middleware)
-)
+const store = createStore(reducer, applyMiddleware(...middleware));
 
-store.dispatch(getAllProducts())
+store.dispatch(getAllProducts());
+store.dispatch(loadCart());
 
 render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('root')
-)
+  document.getElementById("root")
+);

@@ -1,55 +1,57 @@
 import {
-  CHECKOUT_REQUEST,
-  CHECKOUT_FAILURE,
-  ADD_TO_CART
-} from '../actions/types'
+  ADD_TO_CART,
+  RECEIVE_CART
+} from "../actions/types";
 
 const initialState = {
   addedIds: [],
   quantityById: {}
-}
+};
 
 const addedIds = (state = initialState.addedIds, action) => {
   switch (action.type) {
     case ADD_TO_CART:
       if (state.indexOf(action.productId) !== -1) {
-        return state
+        return state;
       }
-      return [ ...state, action.productId ]
+      if (typeof(Storage) !== 'undefined') {
+        localStorage.setItem('react-addedIds', JSON.stringify([...state, action.productId]));
+      }
+      return [...state, action.productId];
+    case RECEIVE_CART:
+      return action.cartState.addedIds
     default:
-      return state
+      // return JSON.parse(localStorage.getItem('react-addedIds'));
+      return state;
   }
-}
+};
 
 const quantityById = (state = initialState.quantityById, action) => {
   switch (action.type) {
     case ADD_TO_CART:
-      const { productId } = action
-      return { ...state,
-        [productId]: (state[productId] || 0) + 1
+      const { productId } = action;
+      if (typeof(Storage) !== 'undefined') {
+        localStorage.setItem('react-quantity', JSON.stringify({ ...state, [productId]: (state[productId] || 0) + 1 }));
       }
+      return { ...state, [productId]: (state[productId] || 0) + 1 };
+    case RECEIVE_CART:
+      return action.cartState.quantityById
     default:
-      return state
+      // return JSON.parse(localStorage.getItem('react-quantity'));
+      return state;
   }
-}
+};
 
 export const getQuantity = (state, productId) =>
-  state.quantityById[productId] || 0
+  state.quantityById[productId] || 0;
 
-export const getAddedIds = state => state.addedIds
+export const getAddedIds = state => state.addedIds;
 
 const cart = (state = initialState, action) => {
-  switch (action.type) {
-    case CHECKOUT_REQUEST:
-      return initialState
-    case CHECKOUT_FAILURE:
-      return action.cart
-    default:
-      return {
-        addedIds: addedIds(state.addedIds, action),
-        quantityById: quantityById(state.quantityById, action)
-      }
-  }
-}
+  return {
+    addedIds: addedIds(state.addedIds, action),
+    quantityById: quantityById(state.quantityById, action)
+  };
+};
 
-export default cart
+export default cart;

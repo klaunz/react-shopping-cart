@@ -1,36 +1,36 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Product from './Product'
-import './Cart.css'
+import React from "react";
+import PropTypes from "prop-types";
+import Product from "./Product";
+import "./Cart.css";
 
-const Cart  = ({ products, total, onCheckoutClicked }) => {
-  const hasProducts = products.length > 0
+const Cart = ({ products, total }) => {
+  const hasProducts = products.length > 0;
   const nodes = hasProducts ? (
-    products.map((product, index) =>
+    products.map((product, index) => (
       <Product
         name={product.name}
         price={product.price}
         quantity={product.quantity}
+        lineTotal={product.lineTotal}
         key={index}
       />
-    )
+    ))
   ) : (
     <em>Please add some products to cart.</em>
-  )
+  );
 
   return (
     <div className="Cart">
-      <h3>Your Cart</h3>
+      <h3>My Bag</h3>
       <div className="Cart__nodes">{nodes}</div>
-      <p>Total: &#36;{total}</p>
+      <h3>Total: &#36;{total}</h3>
     </div>
-  )
-}
+  );
+};
 
 Cart.propTypes = {
   products: PropTypes.array,
-  total: PropTypes.string,
-  onCheckoutClicked: PropTypes.func
-}
+  total: PropTypes.string
+};
 
-export default Cart
+export default Cart;
