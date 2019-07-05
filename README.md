@@ -8,19 +8,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Requirements
 
-[ ] The cart will need to keep its state during page loads / refreshes.
-[ ] List Products – these should be listed at all times to allow adding of products.
-[ ] Products should be listed in this format: product name, price, link to add product
-[ ] Must be able to add a product to the cart.
-[ ] Must be able to view current products in the cart.
-[ ] Cart products should be listed in this format: product name, price, quantity, total, remove link.
-[ ] Product totals should be tallied to give an overall total.
-[ ] Must be able to remove a product from the cart.
-[ ] Adding an existing product will only update existing cart product quantity (e.g. adding the same product twice will NOT create two cart items).
-[ ] All prices should be displayed to 2 decimal places.
-[ ] Error checking will be set to strict for viewing completed code.
-[ ] Project will work as expected with the latest version of React.
-[ ] Use best practices.
+- [x] The cart will need to keep its state during page loads / refreshes.
+- [x] List Products – these should be listed at all times to allow adding of products.
+- [x] Products should be listed in this format: product name, price, link to add product
+- [x] Must be able to add a product to the cart.
+- [x] Must be able to view current products in the cart.
+- [x] Cart products should be listed in this format: product name, price, quantity, total, remove link.
+- [x] Product totals should be tallied to give an overall total.
+- [ ] Must be able to remove a product from the cart.
+- [x] Adding an existing product will only update existing cart product quantity (e.g. adding the same product twice will NOT create two cart items).
+- [x] All prices should be displayed to 2 decimal places.
+- [ ] Error checking will be set to strict for viewing completed code.
+- [x] Project will work as expected with the latest version of React.
+- [ ] Use best practices.
 
 ## Available Scripts
 
