@@ -16,6 +16,7 @@ const store = createStore(reducer, applyMiddleware(...middleware));
 store.dispatch(getAllProducts());
 store.dispatch(loadCart());
 
+
 render(
   <Provider store={store}>
     <App />

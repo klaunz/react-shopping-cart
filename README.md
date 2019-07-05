@@ -15,7 +15,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [x] Must be able to view current products in the cart.
 - [x] Cart products should be listed in this format: product name, price, quantity, total, remove link.
 - [x] Product totals should be tallied to give an overall total.
-- [ ] Must be able to remove a product from the cart.
+- [x] Must be able to remove a product from the cart.
 - [x] Adding an existing product will only update existing cart product quantity (e.g. adding the same product twice will NOT create two cart items).
 - [x] All prices should be displayed to 2 decimal places.
 - [ ] Error checking will be set to strict for viewing completed code.

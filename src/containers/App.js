@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h2 className="App-title">Shopping Cart Example</h2>
+        <h2 className="App-title">VR-FrontendTest-v1.1</h2>
       </header>
       <section className="App-section">
         <ProductsContainer />

@@ -25,9 +25,16 @@ const products = [
 ];
 
 const cartState = {
-  addedIds: JSON.parse(localStorage.getItem('react-addedIds')),
-  quantityById: JSON.parse(localStorage.getItem('react-quantity'))
+  addedIds: [],
+  quantityById: {} 
 };
+
+if (JSON.parse(localStorage.getItem('react-addedIds')))
+  cartState.addedIds = JSON.parse(localStorage.getItem('react-addedIds'))
+
+if (JSON.parse(localStorage.getItem('react-quantity')))
+  cartState.quantityById = JSON.parse(localStorage.getItem('react-quantity'))
+
 
 const TIMEOUT = 100;
 

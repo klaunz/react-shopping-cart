@@ -4,7 +4,7 @@
 
 @media (min-width: 768px) {
   .Cart {
-    margin-top: 4.5rem;
+    margin-top: 4.6rem;
     text-align: left;
   }  
 }
@@ -28,7 +28,39 @@
   }
 }
 
-.Cart .Cart__nodes .Product {
+@media (min-width: 768px) {
+  .Cart__title {
+    margin-top: 2rem;
+  }
+}
+
+.Cart__item {
   background-color: #ededed;
+  margin-bottom: 2rem;
   padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .Cart__item {
+    margin-bottom: 1rem;
+    padding: 2rem;
+    text-align: left;
+  }
+}
+
+@media (min-width: 768px) {
+  .Cart__item {
+    display: grid;
+    grid-template:
+    'name  remove' auto
+    'price remove' auto
+    'total remove' auto
+    /4fr   1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .ProductItem__remove {
+    align-self: start;
+  }
 }

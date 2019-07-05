@@ -4,13 +4,14 @@ import { connect } from "react-redux";
 import { getTotal, getCartProducts } from "../reducers";
 import Cart from "../components/Cart";
 
-const CartContainer = ({ products, total, checkout }) => (
+const CartContainer = ({ products, total }) => (
   <Cart
     products={products}
     total={total}
-    onCheckoutClicked={() => checkout(products)}
   />
 );
+
+//removeLineItem(index)
 
 CartContainer.propTypes = {
   products: PropTypes.arrayOf(
@@ -18,7 +19,8 @@ CartContainer.propTypes = {
       name: PropTypes.string.isRequired,
       price: PropTypes.number.isRequired,
       quantity: PropTypes.number.isRequired,
-      lineTotal: PropTypes.string.isRequired
+      lineTotal: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired
     })
   ).isRequired,
   total: PropTypes.string

@@ -1,12 +1,10 @@
 .ProductItem {
   background-color: #ededed;
-  margin-bottom: 2rem;
-  padding: 1rem;
+  text-align: left;
 }
 
 @media (min-width: 768px) {
   .ProductItem {
-    padding: 2rem;
     text-align: left;
   }
 }
@@ -16,6 +14,7 @@
   background-color: #282c34;
   border-radius: .3rem;
   color: #fff;
+  cursor: pointer;
   padding: .5rem 2rem;
   width: 100%;
 }
@@ -25,6 +24,16 @@
     font-size: 1.2rem;
     margin-top: 1.5rem;
     width: auto;
+  }
+}
+
+.Product__name {
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .Product__name {
+    margin-bottom: 0;
   }
 }
 
@@ -39,4 +48,10 @@
   font-style: italic;
   margin-top: 1rem;
   padding: 0;
+}
+
+@media (min-width: 768px) {
+  .ProductItem__remove {
+    margin-top: 0;
+  }
 }

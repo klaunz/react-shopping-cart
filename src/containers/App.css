@@ -50,7 +50,7 @@
     display: grid;
     padding: 2rem 4rem;
     grid-gap: 4rem;
-    grid-template-columns: 1fr 30rem;
+    grid-template-columns: 2fr 1fr;
   }
 }
 

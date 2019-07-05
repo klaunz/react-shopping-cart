@@ -1,6 +1,7 @@
 import {
   ADD_TO_CART,
-  RECEIVE_CART
+  RECEIVE_CART,
+  REMOVE_ITEM
 } from "../actions/types";
 
 const initialState = {
@@ -20,6 +21,12 @@ const addedIds = (state = initialState.addedIds, action) => {
       return [...state, action.productId];
     case RECEIVE_CART:
       return action.cartState.addedIds
+    case REMOVE_ITEM:
+      state.splice(action.index, 1)
+      if (typeof(Storage) !== 'undefined') {
+        localStorage.setItem('react-addedIds', JSON.stringify(state));
+      }
+      return state
     default:
       // return JSON.parse(localStorage.getItem('react-addedIds'));
       return state;
@@ -36,6 +43,12 @@ const quantityById = (state = initialState.quantityById, action) => {
       return { ...state, [productId]: (state[productId] || 0) + 1 };
     case RECEIVE_CART:
       return action.cartState.quantityById
+    case REMOVE_ITEM:
+      delete state[action.id]
+      if (typeof(Storage) !== 'undefined') {
+        localStorage.setItem('react-quantity', JSON.stringify(state));
+      }
+      return state
     default:
       // return JSON.parse(localStorage.getItem('react-quantity'));
       return state;
