@@ -89,7 +89,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
-```
 
 ## Project Structure
 
@@ -110,3 +109,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ├── README.md....................the file you are reading
 ├── package-lock.json............depencency lock
 └── package.json............package meta info
+```
