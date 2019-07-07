@@ -95,10 +95,10 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ```
 .
 ├── node_modules.................dependent node packages
-├── public.......................html and static assets (https://cli.vuejs.org/guide/html-and-static-assets.html)
+├── public.......................html and static assets
 │   ├── favicon.ico..............favicons and app icons
 │   ├── index.html...............the index file for development build only
-│   └── manifest.json............the web app manifest (https://developer.mozilla.org/en-US/docs/Web/Manifest)
+│   └── manifest.json............the web app manifest
 ├── src..........................main source code folder
 │   ├── api......................api folder to fetch products
 │   ├── components...............react components
