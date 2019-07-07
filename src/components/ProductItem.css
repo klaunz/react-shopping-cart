@@ -19,13 +19,13 @@
   margin-top: 1.5rem;
   padding: 0.5rem 2rem;
   width: 100%;
-  transition: ease all .2s;
+  transition: ease all 0.2s;
 }
 
 .ProductItem__button:hover {
   background-color: #61dafb;
   color: #fff;
-  transition: ease all .2s;
+  transition: ease all 0.2s;
 }
 
 @media (min-width: 768px) {
@@ -34,20 +34,6 @@
     margin-top: 1.5rem;
     width: auto;
   }
-}
-
-.Product__name {
-  margin-top: 0;
-}
-
-@media (min-width: 768px) {
-  .Product__name {
-    margin-bottom: 0;
-  }
-}
-
-.Product__price {
-  margin-bottom: 0;
 }
 
 .ProductItem__remove {

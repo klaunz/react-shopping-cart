@@ -8,23 +8,17 @@ import Cart from "../components/Cart";
 
 const CartContainer = ({ products, total, removeLineItem }) => {
   const hasProducts = products.length > 0;
-  const nodes = hasProducts ? (
-    products.map((product, index) => (
-      <div className="Cart__item" key={index}>
-        <LineItem
-          product={product}
-          onRemoveItemClicked={() => removeLineItem(index, product.id)}
-        />
-      </div>
-    ))
-  ) : (
-    `Please add some products to cart.`
-  );
-  return (
-    <Cart total={total}>
-    {nodes}
-    </Cart>
-  );
+  const nodes = hasProducts
+    ? products.map((product, index) => (
+        <div className="Cart__item" key={index}>
+          <LineItem
+            product={product}
+            onRemoveItemClicked={() => removeLineItem(index, product.id)}
+          />
+        </div>
+      ))
+    : `Please add some products to cart.`;
+  return <Cart total={total}>{nodes}</Cart>;
 };
 
 CartContainer.propTypes = {

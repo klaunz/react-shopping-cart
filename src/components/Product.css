@@ -2,12 +2,18 @@
   padding: 0;
 }
 
-.Product__lineTotal {
-  margin-bottom: 0;
+.Product__name {
+  margin-top: 0;
 }
 
 .Product__name {
   margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .Product__name {
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: 768px) {

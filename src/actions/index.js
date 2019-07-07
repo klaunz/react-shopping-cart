@@ -37,5 +37,5 @@ export const removeLineItem = (index, id) => dispatch => {
     type: types.REMOVE_ITEM,
     index,
     id
-  })
+  });
 };

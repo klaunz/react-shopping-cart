@@ -6,7 +6,17 @@ import "./LineItem.css";
 const LineItem = ({ product, onRemoveItemClicked }) => (
   <div className="LineItem">
     <div className="LineItem__product">
-      <Product name={product.name} price={product.price} quantity={product.quantity} lineTotal={product.lineTotal} />
+      <Product name={product.name} price={product.price} />
+      {product.quantity ? (
+        <p className="LineItem__qty">
+          <strong>Quantity: {product.quantity}</strong>
+        </p>
+      ) : null}
+      {product.lineTotal ? (
+        <p className="LineItem__lineTotal">
+          <strong>Total: &#36;{product.lineTotal}</strong>
+        </p>
+      ) : null}
     </div>
     <div>
       <button onClick={onRemoveItemClicked} className="LineItem__remove">
@@ -20,7 +30,8 @@ LineItem.propTypes = {
   product: PropTypes.shape({
     name: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
-    lineTotal: PropTypes.string.isRequired
+    quantity: PropTypes.number,
+    lineTotal: PropTypes.string
   }).isRequired,
   onRemoveItemClicked: PropTypes.func.isRequired
 };

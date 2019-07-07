@@ -35,7 +35,7 @@ const setCartState = () => {
 
   if (JSON.parse(localStorage.getItem("react-quantity")))
     cartState.quantityById = JSON.parse(localStorage.getItem("react-quantity"));
-}
+};
 
 const TIMEOUT = 100;
 
