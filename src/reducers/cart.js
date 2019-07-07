@@ -27,7 +27,6 @@ const addedIds = (state = initialState.addedIds, action) => {
       }
       return state;
     default:
-      // return JSON.parse(localStorage.getItem('react-addedIds'));
       return state;
   }
 };
@@ -52,7 +51,6 @@ const quantityById = (state = initialState.quantityById, action) => {
       }
       return state;
     default:
-      // return JSON.parse(localStorage.getItem('react-quantity'));
       return state;
   }
 };
