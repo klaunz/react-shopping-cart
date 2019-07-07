@@ -107,5 +107,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ├── .gitignore...................git ignore
 ├── README.md....................the file you are reading
 ├── package-lock.json............depencency lock
-└── package.json............package meta info
+├── .eslintrc.json   ............eslint configurations
+└── package.json.................package meta info
 ```
