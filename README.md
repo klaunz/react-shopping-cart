@@ -18,9 +18,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [x] Must be able to remove a product from the cart.
 - [x] Adding an existing product will only update existing cart product quantity (e.g. adding the same product twice will NOT create two cart items).
 - [x] All prices should be displayed to 2 decimal places.
-- [ ] Error checking will be set to strict for viewing completed code.
+- [x] Error checking will be set to strict for viewing completed code.
 - [x] Project will work as expected with the latest version of React.
-- [ ] Use best practices.
+- [x] Use best practices.
 
 ## Available Scripts
 
@@ -88,3 +88,25 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+```
+
+## Project Structure
+
+```
+.
+├── node_modules.................dependent node packages
+├── public.......................html and static assets (https://cli.vuejs.org/guide/html-and-static-assets.html)
+│   ├── favicon.ico..............favicons and app icons
+│   ├── index.html...............the index file for development build only
+│   └── manifest.json............the web app manifest (https://developer.mozilla.org/en-US/docs/Web/Manifest)
+├── src..........................main source code folder
+│   ├── api......................api folder to fetch products
+│   ├── components...............react components
+│   ├── actions..................Mocking client-server processing
+│   ├── containers...............React app containers for components
+│   └── reducers.................redux reducers
+├── .gitignore...................git ignore
+├── README.md....................the file you are reading
+├── package-lock.json............depencency lock
+└── package.json............package meta info
