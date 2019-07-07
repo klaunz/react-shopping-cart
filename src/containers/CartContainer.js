@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { removeLineItem } from "../actions";
 import { getTotal, getCartProducts } from "../reducers";
-import Product from "../components/Product";
+import LineItem from "../components/LineItem";
 import Cart from "../components/Cart";
 
 const CartContainer = ({ products, total, removeLineItem }) => {
@@ -11,14 +11,9 @@ const CartContainer = ({ products, total, removeLineItem }) => {
   const nodes = hasProducts ? (
     products.map((product, index) => (
       <div className="Cart__item" key={index}>
-        <Product
-          name={product.name}
-          price={product.price}
-          quantity={product.quantity}
-          lineTotal={product.lineTotal}
-          onRemoveItemClicked={() => {
-            removeLineItem(index, product.id);
-          }}
+        <LineItem
+          product={product}
+          onRemoveItemClicked={() => removeLineItem(index, product.id)}
         />
       </div>
     ))

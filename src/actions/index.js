@@ -32,12 +32,10 @@ export const addToCart = productId => (dispatch, getState) => {
   dispatch(addToCartUnsafe(productId));
 };
 
-const removeLineItemUnsafe = (index, id) => ({
-  type: types.REMOVE_ITEM,
-  index,
-  id
-});
-
-export const removeLineItem = (index, id) => (dispatch, getState) => {
-  dispatch(removeLineItemUnsafe(index, id));
+export const removeLineItem = (index, id) => dispatch => {
+  dispatch({
+    type: types.REMOVE_ITEM,
+    index,
+    id
+  })
 };
