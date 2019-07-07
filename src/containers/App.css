@@ -48,9 +48,14 @@
 @media (min-width: 768px) {
   .App-section {
     display: grid;
-    padding: 2rem 4rem;
     grid-gap: 4rem;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .App-section {
+    padding: 2rem 4rem;
   }
 }
 

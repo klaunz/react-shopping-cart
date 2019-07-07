@@ -9,9 +9,16 @@ const Product = ({ price, quantity, name, lineTotal, onRemoveItemClicked }) => (
       &#36;{price.toFixed(2)}
       {quantity ? ` x ${quantity}` : null}
     </h4>
-    {lineTotal ? <p className="Product__lineTotal"><strong>Total: &#36;{lineTotal}</strong></p> : null}
-    {quantity ? <button onClick={onRemoveItemClicked} className="ProductItem__remove">Remove</button> : null}
-    
+    {lineTotal ? (
+      <p className="Product__lineTotal">
+        <strong>Total: &#36;{lineTotal}</strong>
+      </p>
+    ) : null}
+    {quantity ? (
+      <button onClick={onRemoveItemClicked} className="ProductItem__remove">
+        Remove
+      </button>
+    ) : null}
   </div>
 );
 

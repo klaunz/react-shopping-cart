@@ -28,7 +28,6 @@ const addToCartUnsafe = productId => ({
   productId
 });
 
-
 export const addToCart = productId => (dispatch, getState) => {
   dispatch(addToCartUnsafe(productId));
 };

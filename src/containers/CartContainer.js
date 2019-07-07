@@ -1,17 +1,36 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import { removeLineItem } from "../actions";
 import { getTotal, getCartProducts } from "../reducers";
+import Product from "../components/Product";
 import Cart from "../components/Cart";
 
-const CartContainer = ({ products, total }) => (
-  <Cart
-    products={products}
-    total={total}
-  />
-);
-
-//removeLineItem(index)
+const CartContainer = ({ products, total, removeLineItem }) => {
+  const hasProducts = products.length > 0;
+  const nodes = hasProducts ? (
+    products.map((product, index) => (
+      <div className="Cart__item" key={index}>
+        <Product
+          name={product.name}
+          price={product.price}
+          quantity={product.quantity}
+          lineTotal={product.lineTotal}
+          onRemoveItemClicked={() => {
+            removeLineItem(index, product.id);
+          }}
+        />
+      </div>
+    ))
+  ) : (
+    `Please add some products to cart.`
+  );
+  return (
+    <Cart total={total}>
+    {nodes}
+    </Cart>
+  );
+};
 
 CartContainer.propTypes = {
   products: PropTypes.arrayOf(
@@ -30,9 +49,10 @@ const mapStateToProps = state => {
   return {
     products: getCartProducts(state),
     total: getTotal(state)
-  }
+  };
 };
 
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  { removeLineItem }
 )(CartContainer);

@@ -26,21 +26,23 @@ const products = [
 
 const cartState = {
   addedIds: [],
-  quantityById: {} 
+  quantityById: {}
 };
 
-if (JSON.parse(localStorage.getItem('react-addedIds')))
-  cartState.addedIds = JSON.parse(localStorage.getItem('react-addedIds'))
+const setCartState = () => {
+  if (JSON.parse(localStorage.getItem("react-addedIds")))
+    cartState.addedIds = JSON.parse(localStorage.getItem("react-addedIds"));
 
-if (JSON.parse(localStorage.getItem('react-quantity')))
-  cartState.quantityById = JSON.parse(localStorage.getItem('react-quantity'))
-
+  if (JSON.parse(localStorage.getItem("react-quantity")))
+    cartState.quantityById = JSON.parse(localStorage.getItem("react-quantity"));
+}
 
 const TIMEOUT = 100;
+
+setCartState();
 
 export default {
   getProducts: (cb, timeout) =>
     setTimeout(() => cb(products), timeout || TIMEOUT),
-  getCart: (cb, timeout) =>
-    setTimeout(() => cb(cartState), timeout || TIMEOUT)
+  getCart: (cb, timeout) => setTimeout(() => cb(cartState), timeout || TIMEOUT)
 };

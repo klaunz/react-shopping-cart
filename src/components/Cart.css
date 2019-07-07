@@ -6,7 +6,7 @@
   .Cart {
     margin-top: 4.6rem;
     text-align: left;
-  }  
+  }
 }
 
 .Cart__button[disabled] {
@@ -48,19 +48,3 @@
   }
 }
 
-@media (min-width: 768px) {
-  .Cart__item {
-    display: grid;
-    grid-template:
-    'name  remove' auto
-    'price remove' auto
-    'total remove' auto
-    /4fr   1fr;
-  }
-}
-
-@media (min-width: 768px) {
-  .ProductItem__remove {
-    align-self: start;
-  }
-}

@@ -1,5 +1,4 @@
 import { combineReducers } from "redux";
-import shop from "../api/shop";
 import products, * as fromProducts from "./products";
 import cart, * as fromCart from "./cart";
 
@@ -25,12 +24,12 @@ export const getTotal = state =>
     .toFixed(2);
 
 export const getLineTotal = (state, id) => {
-  const price = getProduct(state, id).price
-  const quantity = getQuantity(state, id)
-  return (price * quantity).toFixed(2)
-}
+  const price = getProduct(state, id).price;
+  const quantity = getQuantity(state, id);
+  return (price * quantity).toFixed(2);
+};
 
-export const getCartProducts = state => 
+export const getCartProducts = state =>
   getAddedIds(state).map(id => ({
     ...getProduct(state, id),
     quantity: getQuantity(state, id),

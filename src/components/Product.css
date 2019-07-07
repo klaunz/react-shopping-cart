@@ -1,4 +1,40 @@
 .Product {
-  margin-bottom: 1rem;
   padding: 0;
+}
+
+.Product__lineTotal {
+  margin-bottom: 0;
+}
+
+.Product__name {
+  grid-area: name;
+}
+
+.Product__price {
+  grid-area: price;
+}
+
+.Product__lineTotal {
+  grid-area: total;
+}
+
+.ProductItem__remove {
+  grid-area: remove;
+}
+
+@media (min-width: 768px) {
+  .Product {
+    display: grid;
+    grid-template:
+      "name  remove" auto
+      "price remove" auto
+      "total remove" auto
+      / 5fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .ProductItem__remove {
+    align-self: start;
+  }
 }

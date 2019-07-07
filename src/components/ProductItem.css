@@ -1,6 +1,7 @@
 .ProductItem {
   background-color: #ededed;
-  text-align: left;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -12,11 +13,19 @@
 .ProductItem__button {
   border: 0;
   background-color: #282c34;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   color: #fff;
   cursor: pointer;
-  padding: .5rem 2rem;
+  margin-top: 1.5rem;
+  padding: 0.5rem 2rem;
   width: 100%;
+  transition: ease all .2s;
+}
+
+.ProductItem__button:hover {
+  background-color: #61dafb;
+  color: #fff;
+  transition: ease all .2s;
 }
 
 @media (min-width: 768px) {
@@ -45,6 +54,7 @@
   border: 0;
   background-color: transparent;
   color: #282c34;
+  cursor: pointer;
   font-style: italic;
   margin-top: 1rem;
   padding: 0;
