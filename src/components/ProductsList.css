@@ -1,30 +1,30 @@
-.ProductList__title {
+.ProductsList__title {
   border-bottom: 0.1rem solid #282c34;
   padding-bottom: 1.5rem;
   text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
-  .ProductList__title {
+  .ProductsList__title {
     margin-bottom: 2rem;
     text-align: left;
   }
 }
 
 @media (min-width: 768px) {
-  .ProductList__products {
+  .ProductsList__products {
     display: grid;
     grid-gap: 2rem;
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-.ProductList__products .ProductItem {
+.ProductsList__products .ProductItem {
   padding: 1rem;
 }
 
 @media (min-width: 768px) {
-  .ProductList__products .ProductItem {
+  .ProductsList__products .ProductItem {
     padding: 2rem;
   }
 }

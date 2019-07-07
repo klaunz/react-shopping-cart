@@ -1,6 +1,5 @@
 .LineItem {
   background-color: #ededed;
-  margin-bottom: 2rem;
   text-align: center;
 }
 
@@ -36,18 +35,21 @@
   }
 }
 
-.Product__name {
-  margin-top: 0;
+.LineItem__remove {
+  grid-area: remove;
 }
 
 @media (min-width: 768px) {
-  .Product__name {
-    margin-bottom: 0;
+  .LineItem {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
   }
 }
 
-.Product__price {
-  margin-bottom: 0;
+@media (min-width: 768px) {
+  .LineItem__remove {
+    align-self: start;
+  }
 }
 
 .LineItem__remove {

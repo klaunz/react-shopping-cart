@@ -7,34 +7,15 @@
 }
 
 .Product__name {
-  grid-area: name;
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .Product__name {
+    margin-bottom: 0;
+  }
 }
 
 .Product__price {
-  grid-area: price;
-}
-
-.Product__lineTotal {
-  grid-area: total;
-}
-
-.ProductItem__remove {
-  grid-area: remove;
-}
-
-@media (min-width: 768px) {
-  .Product {
-    display: grid;
-    grid-template:
-      "name  remove" auto
-      "price remove" auto
-      "total remove" auto
-      / 5fr 1fr;
-  }
-}
-
-@media (min-width: 768px) {
-  .ProductItem__remove {
-    align-self: start;
-  }
+  margin-bottom: 0;
 }

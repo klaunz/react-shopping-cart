@@ -37,7 +37,7 @@ describe('ProductItem component', () => {
 
   it('should render product', () => {
     const { product } = setup(productProps)
-    expect(product.props()).toEqual({ name: 'Product 1', price: 9.99, quantity: 6, lineTotal: '59.94' })
+    expect(product.props()).toEqual(productProps)
   })
 
   it('should render Remove message', () => {

@@ -1,18 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Product from "./Product";
-import "./ProductItem.css";
+import "./LineItem.css";
 
-const ProductItem = ({ product, onRemoveItemClicked }) => (
-  <div className="ProductItem">
-    <Product name={product.name} price={product.price} quantity={product.quantity} lineTotal={product.lineTotal} />
-    <button onClick={onRemoveItemClicked} className="ProductItem__remove">
-      Remove
-    </button>
+const LineItem = ({ product, onRemoveItemClicked }) => (
+  <div className="LineItem">
+    <div className="LineItem__product">
+      <Product name={product.name} price={product.price} quantity={product.quantity} lineTotal={product.lineTotal} />
+    </div>
+    <div>
+      <button onClick={onRemoveItemClicked} className="LineItem__remove">
+        Remove
+      </button>
+    </div>
   </div>
 );
 
-ProductItem.propTypes = {
+LineItem.propTypes = {
   product: PropTypes.shape({
     name: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
@@ -21,4 +25,4 @@ ProductItem.propTypes = {
   onRemoveItemClicked: PropTypes.func.isRequired
 };
 
-export default ProductItem;
+export default LineItem;
