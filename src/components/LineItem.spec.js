@@ -42,7 +42,7 @@ describe("ProductItem component", () => {
       quantity: 1,
       lineTotal: "9.99"
     });
-    expect(quantity.text()).toBe("Quantity: 1");
+    expect(quantity.text()).toMatch(/^Quantity: 1/);
   });
 
   it("should render total", () => {
