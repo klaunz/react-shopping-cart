@@ -1,4 +1,4 @@
-# VR-FrontendTest-v1.1
+# React Shopping Cart Example
 
 ## Objective
 
@@ -20,7 +20,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [x] All prices should be displayed to 2 decimal places.
 - [x] Error checking will be set to strict for viewing completed code.
 - [x] Project will work as expected with the latest version of React.
-- [x] Use best practices.
 
 ## Available Scripts
 
